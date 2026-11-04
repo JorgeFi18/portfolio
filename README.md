@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jorge Figueroa — portfolio
 
-## Getting Started
+Sitio personal para compartir en el CV.
 
-First, run the development server:
+## Dónde editar
+
+- [`src/content/copy.ts`](src/content/copy.ts): todos los textos en español (`es`) e inglés (`en`). Ambos objetos deben tener la misma forma; TypeScript avisa si falta una clave en inglés.
+
+El sitio vive en `/es` y `/en`. Entrar a `/` redirige según el idioma del navegador, y la última elección queda en una cookie. Cada página declara la otra con `hreflang`.
+- [`src/content/profile.ts`](src/content/profile.ts): nombre, contacto (`email`, `linkedin`, `github`, `location`), empresas y la tira de tecnologías. Los campos vacíos no se muestran.
+
+## Desarrollo
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrí [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Publicar en Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Subí el repositorio a GitHub.
+2. Importalo en [Vercel](https://vercel.com/new).
+3. Opcional: definí `NEXT_PUBLIC_SITE_URL` con la URL final (`https://tu-dominio`). Se usa en la vista previa del link, el sitemap y `robots.txt`.
+4. Pegá esa URL en el CV.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+El proyecto usa Next.js. No hace falta configurar build: el comando es `npm run build` y el de arranque es `npm start`.
