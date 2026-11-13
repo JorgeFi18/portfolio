@@ -7,7 +7,7 @@ const es = {
   meta: {
     title: "Jorge Figueroa · Líder técnico",
     description:
-      "Portfolio de Jorge Figueroa, líder técnico. Arquitectura, Node.js, Go y adopción de IA en producto y equipos. Más de 10 años en productos web.",
+      "Portfolio de Jorge Figueroa, líder técnico. Arquitectura, backend en Node.js, Go, Python y .NET, y adopción de IA en producto y equipos. Más de 10 años en productos web.",
     ogLocale: "es_LA",
     ogTagline: "Arquitectura, servidor, IA y equipos",
   },
@@ -43,7 +43,7 @@ const es = {
   profile: {
     role: "Líder técnico",
     summary:
-      "Más de 10 años en productos web. Hoy el trabajo cruza arquitectura, Node.js, microservicios en Go e IA: en el producto y en la forma en que el equipo construye.",
+      "Más de 10 años en productos web, con backend en Node.js, Go, Python y .NET. Hoy el trabajo cruza arquitectura, servidor e IA: en el producto y en la forma en que el equipo construye.",
     availability:
       "Abierto a roles de liderazgo técnico, arquitectura de sistemas y productos con IA.",
   },
@@ -64,12 +64,12 @@ const es = {
       current: true,
       highlights: [
         "Lidero un ecommerce headless en Next.js con multi-zone. La arquitectura va del diagrama a producción.",
-        "El BFF está en Node.js y los microservicios en Go. Sobre lo que ya corre, diagnostico rendimiento y costos.",
+        "El BFF está en Node.js y los microservicios en Go. Con Python armé procesos serverless y scripts. Sobre lo que ya corre, diagnostico rendimiento y costos.",
         "Acompaño a un equipo multidisciplinario en calidad, seguridad, SEO y visibilidad en buscadores generativos.",
         "Investigo y divulgo para que el equipo automatice con MCP. Di talleres sobre MCP como herramientas de desarrollo (DevTools y Checkmarx), armé la revisión de PRs con IA y configuré templates con skills y rules. Trabajo con desarrollo guiado por especificaciones (constitution y guías) y Claude Code en el día a día.",
         "Integré modelos de Gemini, OpenAI y Anthropic para ampliar lo que el producto puede hacer.",
       ],
-      stack: ["Next.js", "Node.js", "Go", "MCP", "Claude Code"],
+      stack: ["Next.js", "Node.js", "Go", "Python", "MCP", "Claude Code"],
     },
     {
       period: "Abr 2021 — Ago 2025",
@@ -79,8 +79,9 @@ const es = {
       highlights: [
         "Definí la arquitectura de frontend e impulsé microfrontends con Module Federation, para que cada equipo desplegara a producción sin quedar trabado por el resto.",
         "Diseñé soluciones serverless e integré IA en el producto, para ampliar lo que podía hacer sin concentrarlo en un solo sistema.",
+        "En Python desarrollé procesos serverless, scripts y microservicios en Flask.",
       ],
-      stack: ["Module Federation", "Microfrontends", "Serverless", "IA"],
+      stack: ["Module Federation", "Microfrontends", "Serverless", "Python", "Flask", "IA"],
     },
     {
       period: "Oct 2020 — Abr 2021",
@@ -107,10 +108,10 @@ const es = {
       role: "Frontend developer",
       company: "Viaro Networks",
       highlights: [
-        "Desarrollé aplicaciones en AngularJS y React.",
+        "Desarrollé aplicaciones en AngularJS y React. También trabajé en APIs en .NET con ASP.NET Web API y Entity Framework.",
         "El trabajo fue en modalidad outsourcing, con equipos distribuidos en distintas partes de Norteamérica.",
       ],
-      stack: ["AngularJS", "React"],
+      stack: ["AngularJS", "React", ".NET", "Entity Framework"],
     },
   ],
   projectsSection: {
@@ -140,8 +141,8 @@ const es = {
       icon: "ai" as IconName,
       context: "Equipos y producto",
       summary:
-        "Investigo y divulgo para que los equipos automaticen con MCP, y dejo templates y guías para construir aplicaciones agénticas. En el producto integré Gemini, OpenAI y Anthropic. Jev entra cuando hace falta una decisión tipada dentro de esos flujos.",
-      stack: ["MCP", "Gemini", "OpenAI", "Anthropic", "Jev"],
+        "Investigo y divulgo para que los equipos automaticen con MCP, y dejo templates y guías para construir aplicaciones agénticas. En el producto integré Gemini, OpenAI y Anthropic.",
+      stack: ["MCP", "Gemini", "OpenAI", "Anthropic"],
     },
     {
       title: "Personalización en telus.com",
@@ -168,12 +169,24 @@ const es = {
     {
       label: "Servidor",
       icon: "server" as IconName,
-      items: ["Node.js", "Express", "Microservicios en Go"],
+      items: [
+        "Node.js",
+        "Express",
+        "Go",
+        "Python",
+        "FastAPI",
+        "Django",
+        "Flask",
+        ".NET",
+        "ASP.NET Core",
+        "Entity Framework",
+        "Microservicios",
+      ],
     },
     {
       label: "IA",
       icon: "ai" as IconName,
-      items: ["Gemini", "OpenAI", "Anthropic", "Claude Code", "Jev", "SDD"],
+      items: ["Gemini", "OpenAI", "Anthropic", "Claude Code", "SDD"],
     },
     {
       label: "DX",
@@ -209,9 +222,9 @@ const es = {
       text: "Arquitectura del diagrama a producción, con diagnóstico de rendimiento y costos",
       icon: "architecture" as IconName,
     },
-    { text: "Node.js, BFF y microservicios en Go", icon: "server" as IconName },
+    { text: "Backend en Node.js, Go, Python o .NET: BFF, APIs y microservicios", icon: "server" as IconName },
     {
-      text: "IA en el equipo y en el producto: Gemini, OpenAI, Anthropic y Jev",
+      text: "IA en el equipo y en el producto: Gemini, OpenAI y Anthropic",
       icon: "agent" as IconName,
     },
     {
@@ -242,7 +255,7 @@ const en = {
   meta: {
     title: "Jorge Figueroa · Technical lead",
     description:
-      "Portfolio of Jorge Figueroa, technical lead. Architecture, Node.js, Go, and AI adoption in products and teams. More than 10 years in web products.",
+      "Portfolio of Jorge Figueroa, technical lead. Architecture, backend in Node.js, Go, Python, and .NET, and AI adoption in products and teams. More than 10 years in web products.",
     ogLocale: "en_US",
     ogTagline: "Architecture, servers, AI, and teams",
   },
@@ -278,7 +291,7 @@ const en = {
   profile: {
     role: "Technical lead",
     summary:
-      "More than 10 years in web products. The work now spans architecture, Node.js, Go microservices, and AI: in the product and in how the team builds.",
+      "More than 10 years in web products, with backend work in Node.js, Go, Python, and .NET. The work now spans architecture, the server, and AI: in the product and in how the team builds.",
     availability:
       "Open to technical leadership, systems architecture, and AI product roles.",
   },
@@ -299,12 +312,12 @@ const en = {
       current: true,
       highlights: [
         "I lead a headless ecommerce on Next.js with multi-zone. Architecture goes from the diagram to production.",
-        "The BFF runs on Node.js and the microservices on Go. On what is already live, I diagnose performance and cost.",
+        "The BFF runs on Node.js and the microservices on Go. I built serverless processes and scripts in Python. On what is already live, I diagnose performance and cost.",
         "I work with a multidisciplinary team on quality, security, SEO, and visibility in generative search.",
         "I research and share how the team can automate with MCP. I ran workshops on MCP as development tools (DevTools and Checkmarx), set up AI-assisted PR review, and configured templates with skills and rules. I work with spec-driven development (constitution and guides) and Claude Code day to day.",
         "I integrated Gemini, OpenAI, and Anthropic models to extend what the product can do.",
       ],
-      stack: ["Next.js", "Node.js", "Go", "MCP", "Claude Code"],
+      stack: ["Next.js", "Node.js", "Go", "Python", "MCP", "Claude Code"],
     },
     {
       period: "Apr 2021 — Aug 2025",
@@ -314,8 +327,9 @@ const en = {
       highlights: [
         "I defined the frontend architecture and drove microfrontends with Module Federation, so each team could ship to production without waiting on the rest.",
         "I designed serverless solutions and brought AI into the product, so it could do more without concentrating everything in one system.",
+        "In Python I built serverless processes, scripts, and Flask microservices.",
       ],
-      stack: ["Module Federation", "Microfrontends", "Serverless", "AI"],
+      stack: ["Module Federation", "Microfrontends", "Serverless", "Python", "Flask", "AI"],
     },
     {
       period: "Oct 2020 — Apr 2021",
@@ -342,10 +356,10 @@ const en = {
       role: "Frontend developer",
       company: "Viaro Networks",
       highlights: [
-        "I built applications in AngularJS and React.",
+        "I built applications in AngularJS and React. I also worked on .NET APIs with ASP.NET Web API and Entity Framework.",
         "The work was outsourcing, with teams distributed across North America.",
       ],
-      stack: ["AngularJS", "React"],
+      stack: ["AngularJS", "React", ".NET", "Entity Framework"],
     },
   ],
   projectsSection: {
@@ -374,8 +388,8 @@ const en = {
       icon: "ai" as IconName,
       context: "Teams and product",
       summary:
-        "I research and share how teams can automate with MCP, and I leave templates and guides for building agentic applications. In the product I integrated Gemini, OpenAI, and Anthropic. Jev comes in when a typed decision is needed inside those flows.",
-      stack: ["MCP", "Gemini", "OpenAI", "Anthropic", "Jev"],
+        "I research and share how teams can automate with MCP, and I leave templates and guides for building agentic applications. In the product I integrated Gemini, OpenAI, and Anthropic.",
+      stack: ["MCP", "Gemini", "OpenAI", "Anthropic"],
     },
     {
       title: "Personalization on telus.com",
@@ -402,12 +416,24 @@ const en = {
     {
       label: "Server",
       icon: "server" as IconName,
-      items: ["Node.js", "Express", "Go microservices"],
+      items: [
+        "Node.js",
+        "Express",
+        "Go",
+        "Python",
+        "FastAPI",
+        "Django",
+        "Flask",
+        ".NET",
+        "ASP.NET Core",
+        "Entity Framework",
+        "Microservices",
+      ],
     },
     {
       label: "AI",
       icon: "ai" as IconName,
-      items: ["Gemini", "OpenAI", "Anthropic", "Claude Code", "Jev", "SDD"],
+      items: ["Gemini", "OpenAI", "Anthropic", "Claude Code", "SDD"],
     },
     {
       label: "DX",
@@ -443,9 +469,9 @@ const en = {
       text: "Architecture from diagram to production, with performance and cost diagnosis",
       icon: "architecture" as IconName,
     },
-    { text: "Node.js, BFF, and Go microservices", icon: "server" as IconName },
+    { text: "Backend in Node.js, Go, Python, or .NET: BFF, APIs, and microservices", icon: "server" as IconName },
     {
-      text: "AI in the team and in the product: Gemini, OpenAI, Anthropic, and Jev",
+      text: "AI in the team and in the product: Gemini, OpenAI, and Anthropic",
       icon: "agent" as IconName,
     },
     {
