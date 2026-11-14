@@ -13,8 +13,15 @@ export function Skills({ copy }: { copy: Copy }) {
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {copy.skillGroups.map((group, index) => {
           const Icon = icons[group.icon];
+          const isWide =
+            copy.skillGroups.length % 3 === 1 && index === copy.skillGroups.length - 1;
           return (
-            <div key={group.icon} data-reveal style={delay((index % 3) * 100)}>
+            <div
+              key={group.icon}
+              data-reveal
+              style={delay((index % 3) * 100)}
+              className={isWide ? "sm:col-span-2 lg:col-span-3" : undefined}
+            >
               <div className="group h-full border border-line p-6 transition-colors duration-300 hover:border-accent hover:bg-blush">
                 <div className="flex items-center gap-3">
                   <span className="inline-flex size-9 items-center justify-center rounded-full bg-chip text-ink transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">

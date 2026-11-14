@@ -13,8 +13,14 @@ export function Scope({ copy }: { copy: Copy }) {
       <ol className="grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2">
         {copy.scope.map((item, index) => {
           const Icon = icons[item.icon];
+          const isWide = copy.scope.length % 2 === 1 && index === copy.scope.length - 1;
           return (
-            <li key={item.icon} className="bg-paper" data-reveal style={delay((index % 2) * 120)}>
+            <li
+              key={item.icon}
+              className={`bg-paper ${isWide ? "sm:col-span-2" : ""}`}
+              data-reveal
+              style={delay((index % 2) * 120)}
+            >
               <div className="group h-full p-6 transition-colors duration-300 hover:bg-blush md:p-8">
                 <div className="flex items-center justify-between">
                   <span className="font-serif text-2xl text-ink">{String(index + 1).padStart(2, "0")}</span>

@@ -6,6 +6,8 @@ export const profile = {
   email: "jorgefigueroa1897@gmail.com",
   linkedin: "https://www.linkedin.com/in/jorge-figueroa-gt/",
   github: "https://github.com/JorgeFi18",
+  sessionize: "https://sessionize.com/jorge-figueroa-gt/",
+  tiktok: "https://www.tiktok.com/@jorgefi_dev",
   location: "",
 };
 
@@ -19,7 +21,8 @@ export type IconName =
   | "data"
   | "commerce"
   | "layers"
-  | "chart";
+  | "chart"
+  | "management";
 
 export const companies = [
   "Itti",
@@ -48,7 +51,7 @@ export const stackStrip = [
 ];
 
 export type ContactLink = {
-  kind: "email" | "linkedin" | "github";
+  kind: "email" | "linkedin" | "github" | "sessionize" | "tiktok";
   label: string;
   href: string;
 };
@@ -63,6 +66,12 @@ export function contactLinks(): ContactLink[] {
       : null,
     profile.github
       ? { kind: "github", label: "GitHub", href: profile.github }
+      : null,
+    profile.sessionize
+      ? { kind: "sessionize", label: "Sessionize", href: profile.sessionize }
+      : null,
+    profile.tiktok
+      ? { kind: "tiktok", label: "TikTok", href: profile.tiktok }
       : null,
   ];
   return links.filter((link): link is ContactLink => link !== null);
@@ -84,7 +93,7 @@ export function personJsonLd(locale: Locale) {
     inLanguage: locale,
     knowsAbout: copy.skillGroups.flatMap((group) => group.items),
     ...(profile.email ? { email: profile.email } : {}),
-    ...(profile.location ? { homeLocation: profile.location } : {}),
+    ...((copy.profile.location || profile.location) ? { homeLocation: copy.profile.location || profile.location } : {}),
     ...(sameAs.length > 0 ? { sameAs } : {}),
   };
 }

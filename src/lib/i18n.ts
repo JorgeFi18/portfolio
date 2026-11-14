@@ -6,6 +6,7 @@ const sectionKeys = [
   "hero",
   "experience",
   "projects",
+  "community",
   "skills",
   "scope",
   "contact",

@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { Community } from "@/components/community";
 import { Contact } from "@/components/contact";
 import { Experience } from "@/components/experience";
 import { Header } from "@/components/header";
@@ -31,6 +32,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         <Marquee copy={copy} />
         <Experience copy={copy} />
         <Projects copy={copy} />
+        <Community copy={copy} />
         <Skills copy={copy} />
         <Scope copy={copy} />
       </main>

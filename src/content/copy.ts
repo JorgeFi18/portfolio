@@ -1,15 +1,16 @@
 import type { IconName } from "@/content/profile";
+import type { TalkId } from "@/content/talks";
 import type { Locale } from "@/lib/locale";
 
 export type { Locale };
 
 const es = {
   meta: {
-    title: "Jorge Figueroa · Líder técnico",
+    title: "Jorge Figueroa · Liderazgo de ingeniería, arquitectura y speaker",
     description:
-      "Portfolio de Jorge Figueroa, líder técnico. Arquitectura, backend en Node.js, Go, Python y .NET, y adopción de IA en producto y equipos. Más de 10 años en productos web.",
+      "Portfolio de Jorge Figueroa. Liderazgo de ingeniería y equipos, arquitectura, backend en Node.js, Go, Python y .NET, adopción de IA y speaker en AWS Guatemala. Más de 10 años en productos web.",
     ogLocale: "es_LA",
-    ogTagline: "Arquitectura, servidor, IA y equipos",
+    ogTagline: "Liderazgo de equipos, arquitectura, IA y comunidad",
   },
   ui: {
     skip: "Saltar al contenido",
@@ -24,10 +25,17 @@ const es = {
     copied: "Copiado",
     themeToDark: "Activar modo oscuro",
     themeToLight: "Activar modo claro",
+    openPhoto: "Ampliar foto",
+    closePhoto: "Cerrar",
+    previousPhoto: "Foto anterior",
+    nextPhoto: "Foto siguiente",
+    photoCount: "Foto {current} de {total}",
+    talkLanguage: "",
   },
   nav: [
     { href: "#experiencia", label: "Experiencia" },
     { href: "#proyectos", label: "Proyectos" },
+    { href: "#comunidad", label: "Comunidad" },
     { href: "#skills", label: "Skills" },
     { href: "#contacto", label: "Contacto" },
   ],
@@ -36,21 +44,23 @@ const es = {
     hero: "inicio",
     experience: "experiencia",
     projects: "proyectos",
+    community: "comunidad",
     skills: "skills",
     scope: "alcance",
     contact: "contacto",
   },
   profile: {
-    role: "Líder técnico",
+    role: "Liderazgo de ingeniería · Arquitectura · Speaker",
+    location: "Ciudad de Guatemala, Guatemala",
     summary:
-      "Más de 10 años en productos web, con backend en Node.js, Go, Python y .NET. Hoy el trabajo cruza arquitectura, servidor e IA: en el producto y en la forma en que el equipo construye.",
+      "Más de 10 años en productos web, con backend en Node.js, Go, Python y .NET. Lidero equipos alineando objetivos con producto, diseño y operaciones, defino arquitectura e impulso IA — y comparto lo aprendido como speaker y divulgador.",
     availability:
-      "Abierto a roles de liderazgo técnico, arquitectura de sistemas y productos con IA.",
+      "Abierto a roles de Engineering Management, liderazgo técnico, arquitectura de sistemas y productos con IA.",
   },
   facts: [
     { label: "Trayectoria", value: "10+ años" },
-    { label: "Alcance", value: "Arquitectura e IA" },
-    { label: "Hoy", value: "Liderazgo técnico" },
+    { label: "Liderazgo", value: "Equipos y arquitectura" },
+    { label: "Comunidad", value: "Speaker · AWS Guatemala" },
   ],
   experience: {
     title: "Experiencia",
@@ -155,10 +165,60 @@ const es = {
       hrefLabel: "Ver telus.com",
     },
   ],
+  communitySection: {
+    title: "Comunidad",
+    intro:
+      "Me gusta lo que hago y disfruto compartirlo. Soy speaker activo de la comunidad de AWS Guatemala y divulgo contenido de tecnología en TikTok: llevo al escenario y a las redes lo que aprendo construyendo.",
+    speakerProfileLabel: "Perfil de speaker en Sessionize",
+    speakerProfileHref: "https://sessionize.com/jorge-figueroa-gt/",
+    tiktokLabel: "TikTok (@jorgefi_dev)",
+    tiktokHref: "https://www.tiktok.com/@jorgefi_dev",
+    eventLinkLabel: "awscommunityday.gt",
+    eventHref: "https://awscommunityday.gt",
+  },
+  talks: [
+    {
+      id: "aws-2025" as TalkId,
+      event: "AWS Community Day Guatemala",
+      date: "18 oct 2025",
+      dateTime: "2025-10-18",
+      venue: "Universidad Rafael Landívar, Ciudad de Guatemala",
+      title: "IaC: Crea y despliega una arquitectura serverless en AWS con SST",
+      summary:
+        "Infraestructura como código en TypeScript tipado con SST: funciones Lambda, APIs, bases de datos y almacenamiento con Live Lambda Development para probar y depurar en local en tiempo real, sin esperar despliegues completos en cada cambio.",
+      topics: ["IaC", "SST", "TypeScript", "AWS Lambda", "Serverless"],
+      bannerAlt:
+        "Arte oficial de la charla: AWS Community Day Guatemala, «IaC: Crea y despliega una arquitectura serverless en AWS con SST», 18 de octubre de 2025, con Jorge Figueroa.",
+      photoAlts: [
+        "Jorge habla con micrófono frente al escenario de la Universidad Rafael Landívar.",
+        "Vista del auditorio durante la presentación, con la pantalla «¡Soy Jorge Figueroa!» sobre el escenario.",
+        "Selfie de Jorge con el reconocimiento de AWS Community Day y el público saludando detrás.",
+        "Jorge recibe el reconocimiento de AWS Community Day Guatemala junto a un organizador.",
+      ],
+    },
+    {
+      id: "aws-2024" as TalkId,
+      event: "AWS Community Day Guatemala",
+      date: "19 oct 2024",
+      dateTime: "2024-10-19",
+      venue: "Universidad Rafael Landívar, Ciudad de Guatemala",
+      title: "Crea un chatbot con AWS Bedrock y Claude",
+      summary:
+        "De la integración con Amazon Bedrock y Claude 3.5 con contexto propio hasta llevarlo a producción: comparación entre App Runner y Elastic Beanstalk, endpoints con API Gateway, frontend en Amplify y CI/CD con CodeBuild y CodeDeploy.",
+      topics: ["Amazon Bedrock", "Claude 3.5", "App Runner", "API Gateway", "Amplify", "CI/CD"],
+      bannerAlt:
+        "Arte oficial de la charla: AWS Community Day Guatemala, «Crea un chatbot con AWS Bedrock y Claude», 19 de octubre de 2024, con Jorge Figueroa.",
+      photoAlts: [
+        "Jorge explica frente a un salón con asistentes sentados en sus escritorios.",
+        "Jorge presenta junto a la pantalla con los pasos para desplegar la app en Amplify.",
+        "Jorge con la camiseta de AWS Community Day, frente a la demo del chatbot en pantalla.",
+      ],
+    },
+  ],
   skillsSection: {
     title: "Skills",
     intro:
-      "Arquitectura, servidor, IA y la forma en que el equipo construye. El frontend es una parte de ese sistema.",
+      "Arquitectura, servidor, IA, liderazgo de equipos y la forma en que se construye el producto.",
   },
   skillGroups: [
     {
@@ -212,12 +272,26 @@ const es = {
         "Azure (bases de datos)",
       ],
     },
+    {
+      label: "Management y liderazgo",
+      icon: "management" as IconName,
+      items: [
+        "Liderazgo de equipos",
+        "Alineación de objetivos individuales",
+        "Mentoría y desarrollo de carrera",
+        "Coordinación con Producto, Diseño y Operaciones",
+      ],
+    },
   ],
   scopeSection: {
     title: "Alcance",
     intro: "En un proceso de selección, esto es lo que puedo tomar desde el primer mes.",
   },
   scope: [
+    {
+      text: "Liderazgo de equipos: alineación de objetivos individuales, mentoría y coordinación con Producto, Diseño y Operaciones",
+      icon: "management" as IconName,
+    },
     {
       text: "Arquitectura del diagrama a producción, con diagnóstico de rendimiento y costos",
       icon: "architecture" as IconName,
@@ -228,13 +302,13 @@ const es = {
       icon: "agent" as IconName,
     },
     {
-      text: "DX para equipos: talleres de MCP, templates con skills y rules, revisión de PRs con IA y SDD con constitution",
+      text: "DX y divulgación: talleres de MCP, templates con skills y rules, revisión de PRs con IA y SDD con constitution",
       icon: "dx" as IconName,
     },
   ],
   contact: {
     eyebrow: "Contacto",
-    heading: "Si el rol cruza arquitectura, servidor e IA, conversemos.",
+    heading: "Si el rol cruza liderazgo de equipos, arquitectura e IA, conversemos.",
   },
   diagram: {
     aria: "Diagrama de arquitectura: Next.js con multi-zone conecta con un BFF en Node.js, que llama a microservicios en Go con sus datos y a modelos de IA conectados por MCP.",
@@ -253,11 +327,11 @@ const es = {
 
 const en = {
   meta: {
-    title: "Jorge Figueroa · Technical lead",
+    title: "Jorge Figueroa · Engineering leadership, architecture & speaker",
     description:
-      "Portfolio of Jorge Figueroa, technical lead. Architecture, backend in Node.js, Go, Python, and .NET, and AI adoption in products and teams. More than 10 years in web products.",
+      "Portfolio of Jorge Figueroa. Engineering leadership and management, architecture, backend in Node.js, Go, Python, and .NET, AI adoption, and speaker at AWS Guatemala. More than 10 years in web products.",
     ogLocale: "en_US",
-    ogTagline: "Architecture, servers, AI, and teams",
+    ogTagline: "Team leadership, architecture, AI, and community",
   },
   ui: {
     skip: "Skip to content",
@@ -272,10 +346,17 @@ const en = {
     copied: "Copied",
     themeToDark: "Switch to dark mode",
     themeToLight: "Switch to light mode",
+    openPhoto: "Enlarge photo",
+    closePhoto: "Close",
+    previousPhoto: "Previous photo",
+    nextPhoto: "Next photo",
+    photoCount: "Photo {current} of {total}",
+    talkLanguage: "Talk given in Spanish",
   },
   nav: [
     { href: "#experience", label: "Experience" },
     { href: "#projects", label: "Projects" },
+    { href: "#community", label: "Community" },
     { href: "#skills", label: "Skills" },
     { href: "#contact", label: "Contact" },
   ],
@@ -284,21 +365,23 @@ const en = {
     hero: "top",
     experience: "experience",
     projects: "projects",
+    community: "community",
     skills: "skills",
     scope: "scope",
     contact: "contact",
   },
   profile: {
-    role: "Technical lead",
+    role: "Engineering leadership · Architecture · Speaker",
+    location: "Guatemala City, Guatemala",
     summary:
-      "More than 10 years in web products, with backend work in Node.js, Go, Python, and .NET. The work now spans architecture, the server, and AI: in the product and in how the team builds.",
+      "More than 10 years in web products, with backend work in Node.js, Go, Python, and .NET. I lead teams aligning goals across product, design, and operations, define architecture, and drive AI adoption — sharing what I learn as a speaker and content creator.",
     availability:
-      "Open to technical leadership, systems architecture, and AI product roles.",
+      "Open to Engineering Management, technical leadership, systems architecture, and AI product roles.",
   },
   facts: [
     { label: "Track record", value: "10+ years" },
-    { label: "Scope", value: "Architecture and AI" },
-    { label: "Today", value: "Technical leadership" },
+    { label: "Leadership", value: "Teams and architecture" },
+    { label: "Community", value: "Speaker · AWS Guatemala" },
   ],
   experience: {
     title: "Experience",
@@ -402,10 +485,60 @@ const en = {
       hrefLabel: "See telus.com",
     },
   ],
+  communitySection: {
+    title: "Community",
+    intro:
+      "I like what I do and I enjoy sharing it. I'm an active speaker in the AWS Guatemala community and share tech content on TikTok: bringing what I learn by building to the stage and online.",
+    speakerProfileLabel: "Speaker profile on Sessionize",
+    speakerProfileHref: "https://sessionize.com/jorge-figueroa-gt/",
+    tiktokLabel: "TikTok (@jorgefi_dev)",
+    tiktokHref: "https://www.tiktok.com/@jorgefi_dev",
+    eventLinkLabel: "awscommunityday.gt",
+    eventHref: "https://awscommunityday.gt",
+  },
+  talks: [
+    {
+      id: "aws-2025" as TalkId,
+      event: "AWS Community Day Guatemala",
+      date: "Oct 18, 2025",
+      dateTime: "2025-10-18",
+      venue: "Universidad Rafael Landívar, Guatemala City",
+      title: "Modern IaC: Build and Deploy a Serverless Architecture on AWS with SST",
+      summary:
+        "Infrastructure as code in type-safe TypeScript with SST: wiring Lambda functions, APIs, databases, and storage with Live Lambda Development to test and debug locally in real time without waiting on full cloud redeployments.",
+      topics: ["IaC", "SST", "TypeScript", "AWS Lambda", "Serverless"],
+      bannerAlt:
+        "Official talk artwork: AWS Community Day Guatemala, “IaC: Crea y despliega una arquitectura serverless en AWS con SST”, October 18, 2025, with Jorge Figueroa.",
+      photoAlts: [
+        "Jorge speaks into a microphone in front of the Universidad Rafael Landívar stage.",
+        "View of the hall during the talk, with the “¡Soy Jorge Figueroa!” slide above the stage.",
+        "Selfie of Jorge holding the AWS Community Day award, with the audience waving behind him.",
+        "Jorge receives the AWS Community Day Guatemala award next to an organizer.",
+      ],
+    },
+    {
+      id: "aws-2024" as TalkId,
+      event: "AWS Community Day Guatemala",
+      date: "Oct 19, 2024",
+      dateTime: "2024-10-19",
+      venue: "Universidad Rafael Landívar, Guatemala City",
+      title: "Build and Deploy Your Own Generative AI Chatbot with Amazon Bedrock and Claude 3.5",
+      summary:
+        "From integrating Amazon Bedrock and Claude 3.5 with custom domain context to taking it to production: comparing App Runner and Elastic Beanstalk, securing endpoints with API Gateway, frontend delivery on Amplify, and CI/CD with CodeBuild and CodeDeploy.",
+      topics: ["Amazon Bedrock", "Claude 3.5", "App Runner", "API Gateway", "Amplify", "CI/CD"],
+      bannerAlt:
+        "Official talk artwork: AWS Community Day Guatemala, “Crea un chatbot con AWS Bedrock y Claude”, October 19, 2024, with Jorge Figueroa.",
+      photoAlts: [
+        "Jorge explains to a room of attendees seated at their desks.",
+        "Jorge presents next to the screen showing the steps to deploy the app on Amplify.",
+        "Jorge in an AWS Community Day T-shirt, in front of the chatbot demo on screen.",
+      ],
+    },
+  ],
   skillsSection: {
     title: "Skills",
     intro:
-      "Architecture, the server, AI, and the way the team builds. Frontend is one part of that system.",
+      "Architecture, the server, AI, team leadership, and the way the product gets built.",
   },
   skillGroups: [
     {
@@ -459,12 +592,26 @@ const en = {
         "Azure (databases)",
       ],
     },
+    {
+      label: "Management and leadership",
+      icon: "management" as IconName,
+      items: [
+        "Team leadership",
+        "Individual goal alignment",
+        "Mentoring and career growth",
+        "Cross-functional coordination (Product, Design, Operations)",
+      ],
+    },
   ],
   scopeSection: {
     title: "Scope",
     intro: "In a hiring process, this is what I can take on from the first month.",
   },
   scope: [
+    {
+      text: "Team leadership: aligning individual goals, mentoring, and coordinating across Product, Design, and Operations",
+      icon: "management" as IconName,
+    },
     {
       text: "Architecture from diagram to production, with performance and cost diagnosis",
       icon: "architecture" as IconName,
@@ -475,13 +622,13 @@ const en = {
       icon: "agent" as IconName,
     },
     {
-      text: "DX for teams: MCP workshops, templates with skills and rules, AI-assisted PR review, and SDD with a constitution",
+      text: "DX and enablement: MCP workshops, templates with skills and rules, AI-assisted PR review, and SDD with a constitution",
       icon: "dx" as IconName,
     },
   ],
   contact: {
     eyebrow: "Contact",
-    heading: "If the role spans architecture, the server, and AI, let's talk.",
+    heading: "If the role spans team leadership, architecture, and AI, let's talk.",
   },
   diagram: {
     aria: "Architecture diagram: Next.js with multi-zone connects to a Node.js BFF, which calls Go microservices and their data, and AI models connected through MCP.",

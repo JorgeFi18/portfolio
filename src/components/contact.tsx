@@ -1,6 +1,6 @@
-import { ArrowUpRight, Mail } from "lucide-react";
+import { ArrowUpRight, Mail, Mic } from "lucide-react";
 import { CopyEmail } from "@/components/copy-email";
-import { GitHubIcon, LinkedInIcon } from "@/components/icons";
+import { GitHubIcon, LinkedInIcon, TikTokIcon } from "@/components/icons";
 import type { Copy } from "@/content/copy";
 import { contactLinks, profile, type ContactLink } from "@/content/profile";
 
@@ -8,6 +8,8 @@ const linkIcons: Record<ContactLink["kind"], (props: { className?: string }) => 
   email: ({ className }) => <Mail className={className} strokeWidth={1.75} aria-hidden="true" />,
   linkedin: LinkedInIcon,
   github: GitHubIcon,
+  sessionize: ({ className }) => <Mic className={className} strokeWidth={1.75} aria-hidden="true" />,
+  tiktok: TikTokIcon,
 };
 
 const buttonClass =

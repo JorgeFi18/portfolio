@@ -43,9 +43,9 @@ export function Hero({ copy }: { copy: Copy }) {
           <p className="intro mt-8 max-w-xl text-xl leading-relaxed text-ink md:text-2xl" style={delay(520)}>
             {copy.profile.summary}
           </p>
-          {profile.location ? (
+          {(copy.profile.location || profile.location) ? (
             <p className="intro mt-4 text-muted" style={delay(600)}>
-              {profile.location}
+              {copy.profile.location || profile.location}
             </p>
           ) : null}
           <div className="intro mt-10 flex flex-wrap gap-3" style={delay(680)}>
