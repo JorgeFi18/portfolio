@@ -1,4 +1,5 @@
 import { LanguageSwitch } from "@/components/language";
+import { MobileMenu } from "@/components/mobile-menu";
 import { ScrollProgress } from "@/components/scroll-progress";
 import { ThemeToggle } from "@/components/theme-toggle";
 import type { Copy } from "@/content/copy";
@@ -17,10 +18,13 @@ export function Header({ copy, locale }: { copy: Copy; locale: Locale }) {
       </a>
       <div className="mx-auto max-w-5xl px-6 py-4">
         <div className="flex items-center justify-between gap-4">
-          <a href={`#${copy.sections.hero}`} className="font-serif text-lg tracking-tight text-ink">
-            {profile.name}
-          </a>
-          <div className="flex items-center gap-3 sm:gap-5">
+          <div className="flex items-center gap-3">
+            <MobileMenu copy={copy} />
+            <a href={`#${copy.sections.hero}`} className="font-serif text-lg tracking-tight text-ink">
+              {profile.name}
+            </a>
+          </div>
+          <div className="flex items-center gap-2.5 sm:gap-5">
             <nav aria-label={copy.ui.navLabel} className="hidden gap-x-5 sm:flex">
               <NavLinks copy={copy} />
             </nav>
@@ -32,9 +36,6 @@ export function Header({ copy, locale }: { copy: Copy; locale: Locale }) {
             <ThemeToggle toDark={copy.ui.themeToDark} toLight={copy.ui.themeToLight} />
           </div>
         </div>
-        <nav aria-label={copy.ui.navLabel} className="mt-3 flex flex-wrap gap-x-5 gap-y-2 sm:hidden">
-          <NavLinks copy={copy} />
-        </nav>
       </div>
       <ScrollProgress />
     </header>
