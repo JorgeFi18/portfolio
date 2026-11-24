@@ -1,6 +1,6 @@
 import { ArrowUpRight, Mail, Mic } from "lucide-react";
 import { CopyEmail } from "@/components/copy-email";
-import { GitHubIcon, LinkedInIcon, TikTokIcon } from "@/components/icons";
+import { GitHubIcon, GuatemalaFlagIcon, LinkedInIcon, TikTokIcon } from "@/components/icons";
 import type { Copy } from "@/content/copy";
 import { contactLinks, profile, type ContactLink } from "@/content/profile";
 
@@ -65,13 +65,21 @@ export function Contact({ copy }: { copy: Copy }) {
             ) : null}
           </ul>
         ) : null}
-        <p className="mt-16 border-t border-paper/15 pt-6 text-sm text-paper/75">
-          {profile.name}
-          <span className="px-2" aria-hidden="true">
-            ·
-          </span>
-          {copy.profile.role}
-        </p>
+        <div className="mt-16 flex flex-wrap items-center justify-between gap-x-6 gap-y-3 border-t border-paper/15 pt-6 text-sm text-paper/75">
+          <p>
+            {profile.name}
+            <span className="px-2" aria-hidden="true">
+              ·
+            </span>
+            {copy.profile.role}
+          </p>
+          {copy.profile.location ? (
+            <p className="inline-flex items-center gap-2">
+              <GuatemalaFlagIcon className="h-3.5 w-[22px] shrink-0 rounded-[2px] ring-1 ring-paper/20" />
+              <span>{copy.profile.location}</span>
+            </p>
+          ) : null}
+        </div>
       </div>
     </footer>
   );
