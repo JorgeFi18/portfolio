@@ -51,3 +51,31 @@ export function TikTokIcon({ className }: { className?: string }) {
     </svg>
   );
 }
+
+export function GuatemalaFlagIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 15"
+      aria-hidden="true"
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="8" height="15" x="0" y="0" fill="#4997D0" />
+      <rect width="8" height="15" x="8" y="0" fill="#FFFFFF" />
+      <rect width="8" height="15" x="16" y="0" fill="#4997D0" />
+      <g transform="translate(12 7.5)">
+        <path
+          d="M-2.2 1.8 A2.5 2.5 0 1 1 2.2 1.8"
+          fill="none"
+          stroke="#2E7D32"
+          strokeWidth="0.85"
+          strokeLinecap="round"
+        />
+        <line x1="-1.5" y1="1.2" x2="1.5" y2="-1.2" stroke="#795548" strokeWidth="0.6" />
+        <line x1="1.5" y1="1.2" x2="-1.5" y2="-1.2" stroke="#795548" strokeWidth="0.6" />
+        <rect x="-1.1" y="-0.9" width="2.2" height="1.8" rx="0.3" fill="#E6C770" />
+        <circle cx="0" cy="-1.9" r="0.65" fill="#2E7D32" />
+      </g>
+    </svg>
+  );
+}
